@@ -1,0 +1,87 @@
+using namespace std;
+
+void mul(int a = 1) // --multiplication
+{
+    double num1,num2,alpha;
+    cout<<"\tMultiplication\n";
+    cout<<"Enter First no: ";
+    cin>>num1;
+    cout<<"Enter Second no: ";
+    cin>>num2;
+    alpha = num1*num2;
+    cout<<"answer: "<<alpha;
+}
+
+void add(int a = 2) // --addition
+{
+    double num1,num2,beta;
+    cout<<"\tAddition\n";
+    cout<<"Enter First no: ";
+    cin>> num1;
+    cout<<"Enter Second no: ";
+    cin>>num2;
+    beta=num1+num2;
+    cout<<"answer: "<<beta;
+}
+
+void sub(int a = 3) // --subtraction
+{
+    double num1,num2,charlie;
+    cout<<"\tSubtraction\n";
+    cout<<"Enter First no: ";
+    cin>>num1;
+    cout<<"Enter Second no: ";
+    cin>>num2;
+    charlie = num1 - num2;
+    cout<<"answer: "<<charlie;
+}
+
+void divi(int a = 4) // --division
+{
+    double num1,num2,delta;
+    cout<<"\tDivision\n";
+    cout<<"Enter First no: ";
+    cin>>num1;
+    cout<<"Enter Second no: ";
+    cin>>num2;
+    delta = num1/num2;
+    cout<<"answer: "<<delta;
+}
+
+void menu() // --main gui
+{
+    cout<<"1.Multiplication\n";
+    cout<<"2.Addition\n";
+    cout<<"3.Subtraction\n";
+    cout<<"4.Division\n";
+    int a;
+    cout<<"\nEnter your choice: ";
+    cin>>a;
+
+    if (a==1){
+       mul(1);
+    } else if (a==2){
+        add(2);
+    } else if (a==3){
+        sub(3);
+    } else if (a==4){
+        divi(4);
+}
+
+int main () // --end
+{
+    int b=1,answer;
+    if(b==1){
+    menu();
+    cout<<"\n Enter 1 if try again or 0 if no: ";
+    cin>>answer;
+        if (answer==1){
+            cout<<endl;
+            main();
+        } else if (answer==0){
+            cout << "\n^(+ v +)^";
+            b++;
+        }
+    }
+    return 0;
+}
